@@ -1,11 +1,11 @@
 # FullStackReact
 This project is based on the Tasks project by Juan Pablo de la Torre, included in his course of React Native.
 
-## Database with GraphQl
+## API Database with GraphQl
 You can run it with the following command:
 `npm run dev`
 
-It will expose your database at http://localhost:4000
+It will expose your api at http://localhost:4000
 
 I recommend you a program as MongoDB Compass to control and see your database up and running
 
