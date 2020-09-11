@@ -10,6 +10,8 @@ const Stack = createStackNavigator()
 import Login from './views/Login'
 import CreateAccount from './views/CreateAccount'
 import Projects from './views/Projects'
+import NewProject from './views/NewProject'
+import ProjectDetail from './views/ProjectDetail'
 
 const App = () => {
   return (
@@ -52,6 +54,34 @@ const App = () => {
                   fontWeight: 'bold'
                 }
               }}
+            />
+            <Stack.Screen
+              name="NewProject"
+              component={NewProject}
+              options={{
+                title: "New project",
+                headerStyle: {
+                  backgroundColor: '#28303B'
+                },
+                headerTintColor: 'white',
+                headertitleStyle: {
+                  fontWeight: 'bold'
+                }
+              }}
+            />
+            <Stack.Screen
+              name="ProjectDetail"
+              component={ProjectDetail}
+              options={({route}) => ({
+                title: route.params.name,
+                headerStyle: {
+                  backgroundColor: '#28303B'
+                },
+                headerTintColor: 'white',
+                headertitleStyle: {
+                  fontWeight: 'bold'
+                }
+              })}
             />
           </Stack.Navigator>
         </NavigationContainer>

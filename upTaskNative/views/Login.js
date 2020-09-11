@@ -57,7 +57,8 @@ const Login = () => {
             duration: 4000,
             textStyle: {
                 textAlign: 'center'
-            }
+            },
+            onClose: () => saveMessage(null)
         })
     }
 
@@ -70,7 +71,8 @@ const Login = () => {
                     <Item inlineLabel last style={globalStyles.input}>
                         <Input
                             placeholder="Email"
-                            onChangeText={text => saveEmail(text)}
+                            onChangeText={text => saveEmail(text.toLowerCase())}
+                            value={email}
                         />
 
                     </Item>
